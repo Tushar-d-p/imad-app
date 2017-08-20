@@ -18,4 +18,13 @@ element.innerHTML= 'New Value';
 // move the image
 
 var img = document.getElementById('monu');
-img.onclick = function() {img.style.marginLeft = '200 px';};
+var marginLeft=0;
+function moveRight ()
+{
+    marginLeft=marginLeft+10;
+    img.style.marginLeft= marginLeft+'px';
+}
+img.onclick = function() {
+    var interval = setInterval(moveRight,100);
+    
+};
