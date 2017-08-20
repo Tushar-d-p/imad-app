@@ -9,7 +9,7 @@ button.onclick = function () {
     
     
     
-    
+    //capture the respone
     request.onreadystatechange = function()
     {
         if(request.readyState == XMLHttpRequest.DONE)
