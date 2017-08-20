@@ -11,6 +11,6 @@ element.innerHTML= 'New Value';
 
 var img=document.getElementById('monu');
 img.onclick = function() {
-    img.style.marginleft='50px';
+    img.style.marginLeft='100 px';
 };
 
