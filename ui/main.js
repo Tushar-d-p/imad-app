@@ -7,10 +7,15 @@ var element = document.getElementById('main-text'
 
 element.innerHTML= 'New Value';
 
+
+
+
+
+
+
+
+
 // move the image
 
-window.onload= function()
-{
-    var img = document.getElementById('monu');
-img.onclick = function() {img.style.marginLeft = '100 px';};
-};
+var img = document.getElementById('monu');
+img.onclick = function() {img.style.marginLeft = '200 px';};
