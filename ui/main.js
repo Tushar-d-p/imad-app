@@ -9,8 +9,8 @@ element.innerHTML= 'New Value';
 
 // move the image
 
-var img=document.getElementById('monu');
+var img = document.getElementById('monu');
 img.onclick = function() {
-    img.style.marginLeft='100 px';
+    img.style.marginLeft = '100 px';
 };
 
