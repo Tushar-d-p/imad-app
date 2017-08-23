@@ -16,32 +16,6 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
-var articles ={
-   'article-one':{
-  title:'Article one|Tushar Ubale',
-  heading:'Article-one',
-  date:'19 Aug 2017',
-  content:`<p>
-                This is my first article. hope I wrote it Well
-             </p>`
-          },
-   'article-two':{
-    title:'Article two|Tushar Ubale',
-  heading:'Article-two',
-  date:'19 Aug 2017',
-  content:`<p>
-                This is my second article. hope I wrote it Well
-             </p>`
-            },
-   'article-three':{
-    title:'Article third|Tushar Ubale',
-  heading:'Article-third',
-  date:'19 Aug 2017',
-  content:`<p>
-                This is my third article. hope I wrote it Well
-             </p>`
-             }
-};
 
 function createTemplate (data){
     
