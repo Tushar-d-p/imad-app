@@ -65,7 +65,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-function hash(input)
+function hash(input,salt)
 {
     // to create a hash
     var hashed= crypto.pbkdf2Sync(input,salt,10000,'sha512');
@@ -73,7 +73,7 @@ function hash(input)
 }
 
 app.get('/hash/:input',function(req,res){
-   var hashedString=hash(req.params.input);
+   var hashedString=hash(req.params.input,'this is some string');
    res.send(hashedString);
     
 });
