@@ -13,7 +13,7 @@ var config={
   user:'algorithm321',
   database:'algorithm321',
   host: 'db.imad.hasura-app.io',
-  port:'5432',
+  port:5432,
   password: process.env.DB_PASSWORD
 };
 
@@ -99,7 +99,8 @@ app.post('/create-user', function(req,res){
       } 
       else
       {
-          res.send('User successfully created:'+username);
+          var message='User successfully created:'+username;
+          res.send(JSON.stringify({"message":message}));
       } 
     });
 });
@@ -118,7 +119,7 @@ app.post('/login',function(req,res){
       {
           if(result.rows.length === 0)
           {
-              res.send(403).send('username/password is invalid');
+              res.status(403).send(JSON.stringify({"error":"username/passwordis invalid"}));
           }
           else
           {
@@ -132,11 +133,11 @@ app.post('/login',function(req,res){
                   
                   
                   req.session.auth={userId:result.rows[0].id};
-                  res.send('credentials correct');
+                  res.send(JSON.stringify({"message":"credentials correct"}));
               }
               else
               {
-                   res.send(403).send('username/password is invalid');
+                   res.status(403).send(JSON.stringify({"error":"username/password is invalid"}));
               }
               
            }
